@@ -87,6 +87,7 @@ select {
 @import url("./components/footer/footer.css");
 /*-------------------- Footer -------------------- */
 
+@import url("./components/sliders/sliders.css");
 @media (max-width: 820px){
   header .logo{
     min-width: 115px;
@@ -172,7 +173,7 @@ select {
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
-  margin: 0;
+  margin: 0;  
 }
 
 /* Firefox */

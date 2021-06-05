@@ -61,7 +61,7 @@ function Products() {
     return (
         <>
         <Filters />
-        <Sliders />
+        <Sliders /> 
         
         {
             isAdmin && 

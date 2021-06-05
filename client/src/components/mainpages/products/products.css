@@ -40,7 +40,12 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    margin: 15px 0;
+    padding: 15px 0;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 70px;
+    z-index: 11;
+    background: #fff;
 }
 .filter_menu select, input{
     border: 1px solid #ccc;
