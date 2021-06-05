@@ -150,7 +150,7 @@ function CreateProduct() {
                 </div>
 
                 <div className="row">
-                    <label htmlFor="price">Giá</label>
+                    <label htmlFor="price">Giá (VND)</label>
                     <input type="number" name="price" id="price" required
                     value={product.price} onChange={handleChangeInput} />
                 </div>
@@ -181,7 +181,7 @@ function CreateProduct() {
                     </select>
                 </div>
 
-                <button type="submit">{onEdit? "Update" : "Create"}</button>
+                <button type="submit">{onEdit? "Cập nhật" : "Tạo mới"}</button>
             </form>
         </div>
     )

@@ -11,6 +11,10 @@ function DetailProduct() {
     const addCart = state.userAPI.addCart
     const [detailProduct, setDetailProduct] = useState([])
 
+    const formatVND = (n, currency) => {
+        return `${n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} ${currency}`;
+      };
+      
     useEffect(() =>{
         if(params.id){
 
@@ -31,10 +35,10 @@ function DetailProduct() {
                         <h2>{detailProduct.title}</h2>
                         <h6>#id: {detailProduct.product_id}</h6>
                     </div>
-                    <span>$ {detailProduct.price}</span>
+                    <span>{formatVND(detailProduct.price, 'VND')}</span>
                     <p>{detailProduct.description}</p>
                     <p>{detailProduct.content}</p>
-                    <p>Sold: {detailProduct.sold}</p>
+                    <p>Đã bán: {detailProduct.sold}</p>
                     <Link to="/cart" className="cart"
                     onClick={() => addCart(detailProduct)}>
                         Mua Ngay

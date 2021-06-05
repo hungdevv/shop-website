@@ -2,7 +2,9 @@ import React from 'react'
 import BtnRender from './BtnRender'
 
 function ProductItem({product, isAdmin, deleteProduct, handleCheck}) {
-
+    const formatVND = (n, currency) => {
+        return `${n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} ${currency}`;
+      };
     return (
         <div className="product_card">
             {
@@ -13,7 +15,7 @@ function ProductItem({product, isAdmin, deleteProduct, handleCheck}) {
 
             <div className="product_box">
                 <h2 title={product.title}>{product.title}</h2>
-                <span>${product.price}</span>
+                <span>{formatVND(product.price, 'VND')}</span>
                 <p>{product.description}</p>
             </div>
 
